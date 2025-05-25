@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Charcoal Menu</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: url('background_image.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #fff;
+      text-align: center;
+      position: relative;
+    }
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: -1;
+    }
+    .header {
+      padding: 5vw 4vw;
+    }
+    .logo img {
+      width: 25vw;
+      max-width: 120px;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 2vh;
+      border: 3px solid #fff;
+    }
+    .header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 6vw;
+      max-font-size: 40px;
+      margin: 0;
+    }
+    .header p {
+      margin: 10px 0 20px;
+      font-size: 4vw;
+      max-font-size: 18px;
+    }
+    .social-links a {
+      margin: 0 2vw;
+      color: #fff;
+      font-size: 6vw;
+      max-font-size: 24px;
+      text-decoration: none;
+    }
+    .social-links a:hover {
+      color: #ddd;
+    }
+    .menu-section {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* margin: 1vh 0; */
+      padding: 0 5vw;
+    }
+    .menu-button {
+      background-color: rgba(0, 0, 0, 0.7);
+      border-radius: 25px;
+      padding: 4vh 4vw;
+      margin: 2vh 0;
+      width: 100%;
+      max-width: 400px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 4.5vw;
+      font-family: 'Playfair Display', serif;
+      transition: background 0.3s;
+    }
+    .menu-button:hover {
+      background-color: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Media Queries */
+    @media (min-width: 768px) {
+      .logo img {
+        width: 100px;
+      }
+      .header h1 {
+        font-size: 36px;
+      }
+      .header p {
+        font-size: 18px;
+      }
+      .social-links a {
+        font-size: 24px;
+      }
+      .menu-button {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo">
+      <img src="logo_image.jpg" alt="Wild Charcoal Logo">
+    </div>
+    <h1>Wild Charcoal</h1>
+    <p>Fine Dining | Grill House | Lounge</p>
+    <div class="social-links">
+      <a href="https://www.instagram.com/wildcharcoal_ng" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://wa.me/2349131037107" target="_blank" title="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
+  <div class="menu-section">
+    <a href="food-menu.html" class="menu-button">🍽 Food Menu</a>
+    <a href="drinks-menu.html" class="menu-button">🍹 Drinks & Shisha Menu</a>
+    <!-- <a href="lunch-hour.html" class="menu-button">🍛 Lunch Hour Meals</a>
+    <a href="weekly-event.html" class="menu-button">🎉 Weekly Events</a> -->
+  </div>
+</body>
+</html>
