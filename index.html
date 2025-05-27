@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Wild Charcoal Menu</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
@@ -10,33 +10,38 @@
     * {
       box-sizing: border-box;
     }
-   body {
-  margin: 0;
-  font-family: 'Open Sans', sans-serif;
-  background: url('background_image.jpg') no-repeat center center;
-  background-size: cover;
-  background-attachment: scroll; /* Remove fixed for mobile support */
-  color: #fff;
-  text-align: center;
-  position: relative;
-}
-    body::before {
-      content: "";
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      height: 100%;
+    }
+    .background-wrapper {
       position: fixed;
-      top: 0;
-      left: 0;
+      top: 0; left: 0;
       width: 100%;
       height: 100%;
-      /* background: rgba(0, 0, 0, 0.6); */
+      background: url('background_image.jpg') no-repeat center center;
+      background-size: cover;
+      z-index: -2;
+    }
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); 
       z-index: -1;
     }
+
     .header {
       padding: 5vw 4vw;
+      color: white;
+      text-align: center;
     }
     .logo img {
       width: 25vw;
       max-width: 120px;
-      height: auto;
       aspect-ratio: 1 / 1;
       border-radius: 50%;
       object-fit: cover;
@@ -46,29 +51,27 @@
     .header h1 {
       font-family: 'Playfair Display', serif;
       font-size: 6vw;
-      max-font-size: 40px;
       margin: 0;
     }
     .header p {
-      margin: 10px 0 20px;
       font-size: 4vw;
-      max-font-size: 18px;
+      margin: 10px 0 20px;
     }
     .social-links a {
       margin: 0 2vw;
       color: #fff;
       font-size: 6vw;
-      max-font-size: 24px;
       text-decoration: none;
     }
     .social-links a:hover {
       color: #ddd;
     }
+
     .menu-section {
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* margin: 1vh 0; */
+      margin: 5vh 0;
       padding: 0 5vw;
     }
     .menu-button {
@@ -88,14 +91,10 @@
       background-color: rgba(255, 255, 255, 0.2);
     }
 
-    /* Media Queries */
     @media (min-width: 768px) {
       .logo img {
         width: 100px;
       }
-       body {
-    background-attachment: fixed;
-  }
       .header h1 {
         font-size: 36px;
       }
@@ -112,6 +111,9 @@
   </style>
 </head>
 <body>
+  <div class="background-wrapper"></div>
+  <div class="overlay"></div>
+
   <div class="header">
     <div class="logo">
       <img src="logo_image.jpg" alt="Wild Charcoal Logo">
@@ -119,12 +121,8 @@
     <h1>Wild Charcoal</h1>
     <p>Fine Dining | Grill House | Lounge</p>
     <div class="social-links">
-      <a href="https://www.instagram.com/wildcharcoal_ng" target="_blank" title="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="https://wa.me/2349131037106" target="_blank" title="WhatsApp">
-        <i class="fab fa-whatsapp"></i>
-      </a>
+      <a href="https://www.instagram.com/wildcharcoal_ng" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+      <a href="https://wa.me/2349131037106" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
     </div>
   </div>
 
